@@ -1,0 +1,57 @@
+1)Rolling back an autoconfig session?
+2)request is running long how to handle it?
+3)how to upgrade database and applications?
+4)difference between dbtechstack and dbTier
+5)what happens in dbside and application side when we run cutover?
+6)features of oem?
+7)difference between 11g and 12c?
+8)while export import it is taking time?
+9)difference between 12.1 and 12.2
+10)12c features
+11)user requests are in pending stand by for long time?
+12)what are the different utilities we use?
+13)what happens when we lost context file?
+
+The Applications context file can be retrieved by running the adclonectx.pl script.
+
+To retrieve the Applications tier context file,
+
+perl /clone/bin/adclonectx.pl retrieve
+On being prompted for the context file to be retrieved, select the option of retrieving the
+          Applications tier context file that has been lost and retrieve it to the default location specified
+
+          by the script.
+
+The above command can be used only when INST_TOP the is still intact. In case that has also been lost
+
+accidentally, the Applications tier context file may be retrieved as follows:
+
+Execute the following command on the Database tier:
+perl /appsutil/clone/bin/adclonectx.pl retrieve
+
+On being prompted for the context file to be retrieved, select the option of retrieving the
+          Applications tier context file that has been lost.
+
+While confirming the location for the context file, set it to any existing directory with write permission.
+Once the context file has been generated in the specified location, move it to the location specified
+          for the context file in the context variable 's_contextfile'.
+
+To retrieve the Database tier context file,
+
+Execute the following command on the Database tier:
+perl /appsutil/clone/bin/adclonectx.pl retrieve
+
+On being prompted for the context file to be retrieved, select the Database tier context file and
+          retrieve it to the default location specified by the script.
+		  
+14)what is OAM?
+15)ADCTRL 8TH OPTION?
+16)12.2.5 cloning?
+17)how to start the servcies using opmn?
+18)what are the pre and post steps after db upgrade?
+19)what are the components of SGA IN 11G AND 12C?
+
+
+
+
+
