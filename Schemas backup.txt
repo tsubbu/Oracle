@@ -1,0 +1,63 @@
+$mkdir my_dump_dir
+$sqlplus 
+Enter User:/ as sysdba
+SQL>create directory data_pump_dir as ‘/u01/oracle/my_dump_dir’;
+
+Now grant access on this directory object to SCOTT user
+
+SQL> grant read,write on directory data_pump_dir to scott;
+
+Example of Exporting a Full Database
+To Export Full Database, give the following command
+
+$expdp  scott/tiger FULL=y DIRECTORY=data_pump_dir DUMPFILE=full.dmp
+             LOGFILE=myfullexp.log JOB_NAME=myfullJob
+			 
+CREATE DIRECTORY orcl_full AS ‘D:\Data Pump\full export’;
+
+/erphrdev/BACKUP_DUMPS/06_JAN_2018/schemas_backup
+
+
+ impdp system/safUsp5v schemas=EPM directory=schema_backup dumpfile=EPM.dmp logfile=IMP_EPM.log
+ 
+ 
+ OWNER
+--------------------------------------------------------------------------------
+DIRECTORY_NAME
+--------------------------------------------------------------------------------
+DIRECTORY_PATH
+--------------------------------------------------------------------------------
+ORIGIN_CON_ID
+-------------
+SYS
+SCHEMA_BACKUP
+/erphrdev/BACKUP_DUMPS/06_JAN_2018/schemas_backup
+
+/erpprd64/users/oraprd/hypschemas_backup/09_MAR_2018
+
+create directory schema_backup as '/erpprd64/users/oraprd/hypschemas_backup/09_MAR_2018/schema_backup';
+
+
+ expdp system/safUsp5v schemas=EPM dctory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=EPM.dmp logfile=EXP_EPM.log
+  167  expdp system/safUsp5v schemas=ESSBASE_DATA directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=ESSBASE_DATA.dmp logfile=EXP_ESSBASE_DATA.log
+  168  expdp system/safUsp5v schemas=HYP_DEV_EPM directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_EPM.dmp logfile=EXP_HYP_DEV_EPM.log
+  169  expdp system/safUsp5v schemas=HYP_DEV_FDMEE directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_FDMEE.dmp logfile=EXP_HYP_DEV_FDMEE.log
+  170  expdp system/safUsp5v schemas=HYP_DEV_FDMEE_ERP directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_FDMEE_ERP.dmp logfile=EXP_HYP_DEV_FDMEE_ERP.log
+  171  expdp system/safUsp5v schemas=HYP_DEV_FCM directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_FCM.dmp logfile=EXP_HYP_DEV_FCM.log
+  172  expdp system/safUsp5v schemas=HYP_DEV_PLANAPP1 directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_PLANAPP1.dmp logfile=EXP_HYP_DEV_PLANAPP1.log
+  173  expdp system/safUsp5v schemas=HYP_DEV_PLNAPP2 directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_PLNAPP2.dmp logfile=EXP_HYP_DEV_PLNAPP2.log
+  174  expdp system/safUsp5v schemas=HYP_DEV_ODI_MASTER directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_ODI_MASTER.dmp logfile=EXP_HYP_DEV_ODI_MASTER.log
+  175  expdp system/safUsp5v schemas=HYP_DEV_ODI_WORK directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_ODI_WORK.dmp logfile=EXP_HYP_DEV_ODI_WORK.log
+  176  expdp system/safUsp5v schemas=HYP_DEV_EPMA_DATA directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=HYP_DEV_EPMA_DATA.dmp logfile=EXP_HYP_DEV_EPMA_DATA.log
+  177  expdp system/safUsp5v schemas=DEV_ORASDPM directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=DEV_ORASDPM.dmp logfile=DEV_ORASDPM.log
+  178  expdp system/safUsp5v schemas=DEV_SOAINFRA directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=DEV_SOAINFRA.dmp logfile=DEV_SOAINFRA.log
+  179  lexpdp system/safUsp5v schemas=DEV_MDS directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=DEV_MDS.dmp logfile=DEV_MDS.log
+  180  expdp system/safUsp5v schemas=DEV_MDS directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=DEV_MDS.dmp logfile=DEV_MDS.log
+  181  expdp system/safUsp5v schemas=DEV_MDS directory=HYP_SCHEMA_EXPORT_IMPORT dumpfile=DEV_MDS.dmp logfile=DEV_MDS.log
+  182  cd /erphrdev/hrdevdata
+  183  ls
+
+  expdp system/MzYyYmIz schemas=HYP_PRD_EPM directory=schema_backup dumpfile=HYP_PRD_EPM.dmp logfile=EXP_HYP_PRD_EPM.log
+  
+  
+
