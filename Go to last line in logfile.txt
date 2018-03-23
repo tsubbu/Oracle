@@ -1,0 +1,7 @@
+to go to last line in log 
+
+escape
+
+shift +g
+
+2)to search for a file /abcd
