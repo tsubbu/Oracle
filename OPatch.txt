@@ -1,0 +1,32 @@
+
+orvm8@orafrz#  ./opatch lsinventory|grep 26713565
+Patch  26713565     : applied on Sat Nov 18 00:52:02 CST 2017
+Patch description:  "Database Patch Set Update : 12.1.0.2.171017 (26713565)" 
+
+
+orvmprd2@oraprd# ./opatch lsinventory| grep 26022196
+-ksh: ./opatch: not found
+you have mail in /var/spool/mail/oraprd
+orvmprd2@oraprd# ls
+PRD64_mmon_21414_i396974.trc  PRD64_mmon_21414_i396974.trm
+orvmprd2@oraprd# cd $ORACLE_HOME
+orvmprd2@oraprd# cd OPatch
+orvmprd2@oraprd# ./opatch lsinventory| grep 26925311
+orvmprd2@oraprd#
+
+
+/sbin/sysctl -a | grep randomize
+
+ echo $ORACLE_HOME
+  610  export PATH=$PATH:$ORACLE_HOME/OPatch
+
+scp -r applprj@orvm5.paradigmgeo.net:/erpprj/users/applprj/CPUOCT2017/26574496/admin/adgrants.sql  
+
+
+
+
+ 
+
+ 
+ 
+ 
