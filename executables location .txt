@@ -1,0 +1,26 @@
+XXPWR_AP_INVOICES_INTERFACE.ctl
+
+orvm7@applfrz# pwd
+/erpfrz/R12/apps/apps_st/appl/xxpwr/12.0.0/bin
+orvm7@applfrz# ls -ltr XXPWR_AP_INVOICES_INTERFACE.ctl
+-rwxr-xr-x 1 applfrz oraupg35 1501 Dec  2  2015 XXPWR_AP_INVOICES_INTERFACE.ctl
+orvm7@applfrz#
+
+
+orvmprd1@applprd# ls -ltr XXPWR_AP_INVOICES_INTERFACE.ctl
+-rwxr-xr-x 1 applprd oraupg35 1501 Dec  2  2015 XXPWR_AP_INVOICES_INTERFACE.ctl
+orvmprd1@applprd# pwd
+/erpprd64/R12/apps/apps_st/appl/xxpwr/12.0.0/bin
+orvmprd1@applprd#
+
+
+
+
+
+
+
+
+
+
+
+
